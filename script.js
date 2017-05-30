@@ -21,22 +21,25 @@ var app = angular.module("computer",['ngRoute'])
 }])
 
 .controller('MainCtrl', ['$scope', '$http', function($scope, $http){
-  console.log('MainCtrl works!');
+  console.log('MainCtrl loaded');
   $http.get('services.json').then(function(response){
     $scope.services = response.data;
   });
 }])
+
 .controller('AboutCtrl', ['$scope', function($scope){
-  console.log('AboutCtrl works!');
+  console.log('AboutCtrl loaded');
 }])
+
 .controller('ContactCtrl', ['$scope', '$http', function($scope, $http){
-  console.log('ContactCtrl works!');
+  console.log('ContactCtrl loaded');
   $http.get('locations.json').then(function(response){
     $scope.locations = response.data;
   });
 }])
+
 .controller('ServicesCtrl', ['$scope', '$http', function($scope, $http){
-  console.log('ServicesCtrl works!');
+  console.log('ServicesCtrl loaded');
   $http.get('services.json').then(function(response){
     $scope.services = response.data;
   });
